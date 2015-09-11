@@ -10,7 +10,7 @@ public abstract class BaseModel implements Serializable {
   private static final long serialVersionUID = 3886217343314173061L;
   
   /** The database RID of this model. */
-  protected String id = null;
+  private String id = null;
 
   public BaseModel() {}
   

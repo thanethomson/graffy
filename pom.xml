@@ -29,12 +29,6 @@
 
   <dependencies>
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
     	<groupId>com.orientechnologies</groupId>
     	<artifactId>orientdb-core</artifactId>
     	<version>2.1.1</version>
@@ -58,6 +52,26 @@
     	<groupId>com.google.inject</groupId>
     	<artifactId>guice</artifactId>
     	<version>4.0</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.reflections</groupId>
+    	<artifactId>reflections</artifactId>
+    	<version>0.9.10</version>
+    </dependency>
+    <dependency>
+    	<groupId>junit</groupId>
+    	<artifactId>junit</artifactId>
+    	<version>4.12</version>
+    </dependency>
+    <dependency>
+    	<groupId>ch.qos.logback</groupId>
+    	<artifactId>logback-classic</artifactId>
+    	<version>1.1.3</version>
+    </dependency>
+    <dependency>
+    	<groupId>ch.qos.logback</groupId>
+    	<artifactId>logback-core</artifactId>
+    	<version>1.1.3</version>
     </dependency>
   </dependencies>
   <description>An object-relational mapper (ORM) with abstracted transaction handling built on top of OrientDB.</description>

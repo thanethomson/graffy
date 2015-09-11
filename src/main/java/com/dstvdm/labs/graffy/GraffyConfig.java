@@ -3,6 +3,7 @@ package com.dstvdm.labs.graffy;
 import com.dstvdm.labs.graffy.interfaces.DatabaseFactory;
 import com.dstvdm.labs.graffy.interfaces.cache.CacheSystemFactory;
 import com.dstvdm.labs.graffy.interfaces.logging.LoggerFactory;
+import com.dstvdm.labs.graffy.schema.DatabaseSchema;
 import com.google.inject.Inject;
 
 /**
@@ -14,6 +15,7 @@ public class GraffyConfig {
   private final DatabaseFactory databaseFactory;
   private final LoggerFactory loggerFactory;
   private final CacheSystemFactory cacheFactory;
+  private final DatabaseSchema databaseSchema;
 
   @Inject
   public GraffyConfig(DatabaseFactory databaseFactory,
@@ -22,6 +24,9 @@ public class GraffyConfig {
     this.databaseFactory = databaseFactory;
     this.cacheFactory = cacheFactory;
     this.loggerFactory = loggerFactory;
+    
+    // build up our database schema
+    this.databaseSchema = databaseFactory.buildSchema();
   }
   
   /**
@@ -44,6 +49,14 @@ public class GraffyConfig {
    */
   public LoggerFactory getLoggerFactory() {
     return loggerFactory;
+  }
+  
+  
+  /**
+   * Getter for the database schema.
+   */
+  public DatabaseSchema getDatabaseSchema() {
+    return databaseSchema;
   }
 
 }
